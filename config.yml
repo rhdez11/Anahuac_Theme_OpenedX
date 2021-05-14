@@ -1,0 +1,17 @@
+INDIGO_WELCOME_MESSAGE: "The place for all your online learning"
+INDIGO_PRIMARY_COLOR: "#ff5900" # color anahuac 
+
+# Footer links are dictionaries with a "title" and "url"
+# To remove all links, write:
+# INDIGO_FOOTER_NAV_LINKS: []
+# INDIGO_FOOTER_LEGAL_LINKS: []
+INDIGO_FOOTER_NAV_LINKS:
+  - title: "About"
+    url: "/about"
+  - title: "Contact"
+    url: "/contact"
+INDIGO_FOOTER_LEGAL_LINKS:
+    - title: "Terms of service"
+      url: "/tos"
+    - title: "Anahuac theme for Open edX"
+      url: ""
