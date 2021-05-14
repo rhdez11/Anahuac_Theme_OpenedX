@@ -15,17 +15,21 @@
     <footer>
       <div class="row">
         <div class="col-md-9">
-          {% if INDIGO_FOOTER_NAV_LINKS %}
+          
           <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
             <ul class="navbar-nav">
-              {% for link in INDIGO_FOOTER_NAV_LINKS %}
+              
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ link['url'] }}">{{ link['title'] }}</a>
+                  <a class="nav-link" href="/about">About</a>
                 </li>
-              {% endfor %}
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+              
             </ul>
           </nav>
-          {% endif %}
+          
 
           ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
           <p class="copyright">${footer['copyright']}
@@ -37,17 +41,21 @@
               % endif
           </p>
 
-          {% if INDIGO_FOOTER_LEGAL_LINKS %}
+          
           <nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
             <ul class="navbar-nav">
-              {% for link in INDIGO_FOOTER_LEGAL_LINKS %}
+              
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ link['url'] }}">{{ link['title'] }}</a>
+                  <a class="nav-link" href="/tos">Terms of service</a>
                 </li>
-              {% endfor %}
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/overhangio/indigo">Anahuac theme for Open edX</a>
+                </li>
+              
             </ul>
           </nav>
-          {% endif %}
+          
         </div>
         <div class="col-md-3">
           ## Please leave this link and use one of the logos provided
@@ -81,17 +89,21 @@
       % endif
     >
       <div class="colophon">
-        {% if INDIGO_FOOTER_NAV_LINKS %}
+        
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              {% for link in INDIGO_FOOTER_NAV_LINKS %}
+              
               <li>
-                <a href="{{ link['url'] }}">{{ link['title'] }}</a>
+                <a href="/about">About</a>
               </li>
-              {% endfor %}
+              
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
+              
           </ol>
         </nav>
-        {% endif %}
+        
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
@@ -121,17 +133,21 @@
               % endif
           </p>
 
-        {% if INDIGO_FOOTER_LEGAL_LINKS %}
+        
         <nav class="nav-legal" aria-label="${_('Legal')}">
           <ul>
-            {% for link in INDIGO_FOOTER_LEGAL_LINKS %}
+            
               <li>
-                <a href="{{ link['url'] }}">{{ link['title'] }}</a>
+                <a href="/tos">Terms of service</a>
               </li>
-            {% endfor %}
+            
+              <li>
+                <a href="https://github.com/overhangio/indigo">Anahuac theme for Open edX</a>
+              </li>
+            
           </ul>
         </nav>
-        {% endif %}
+        
       </div>
 
       ## Please leave this link and use one of the logos provided
@@ -164,3 +180,13 @@
     <link rel="stylesheet" type="text/css" href="${url}"></link>
   % endfor
 % endif
+
+<style>
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+ color:#fff;
+}
+
+.wrapper-footer {
+	background: black;
+}
+</style>
