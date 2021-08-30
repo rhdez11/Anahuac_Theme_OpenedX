@@ -2,6 +2,8 @@
 
 Este repositorio es para la creacion de un tema de Tutor en Open edX 
 
+Las tres paginas principales modificadas fueron: Landing Page, Course Catalog, About Page.
+
 Para poder ver los archivos que se modificaron entrar a theme/lms/templates/
 
 # Landing Page
